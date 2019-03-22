@@ -2,3 +2,7 @@
 RewriteEngine On
 RewriteCond %{HTTP_USER_AGENT} ^.*(adscanner|AhrefsBot|archive.org_bot|Baiduspider|BehloolBot|bingbot|BLEXBot|coccocbot-image|coccocbot-web|compatible|contxbot|DotBot|DuckDuckGo-Favicons-Bot|DuckDuckBot|Exabot|facebot|facebookexternalhit|Googlebot|Googlebot-News|Googlebot-Image|Googlebot-Video|AdsBot-Google|AdsBot-Google-Mobile-Apps|Slurp|GrapeshotCrawler|houzzbot|MJ12bot|MojeekBot|Nimbostratus-Bot|PaperLiBot|Pinterestbot|PlurkBot|Seekport|SemrushBot|SEOkicks|SeznamBot|stagefright|SurdotlyBot|Sogou|TinEye-bot|Uptimebot|UptimeRobot|Yahoo|YaK|YandexBot|YandexImages).*$ [NC]
 RewriteRule .* - [F,L]
+
+# After this you can verify the by curl, you will get 403 forbidden
+
+# curl --user-agent "Googlebot/2.1 (+http://www.google.com/bot.html)" -I yoursitename.com
